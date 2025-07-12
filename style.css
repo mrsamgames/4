@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #000;
+  color: white;
+  overflow: hidden;
+}
+
+/* خلفية متحركة */
+.bg-effect {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+  background-size: cover;
+  z-index: -1;
+  animation: pulse 8s infinite ease-in-out;
+  filter: blur(2px);
+}
+
+@keyframes pulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+
+/* الشريط العلوي */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 2em;
+  font-family: 'Cairo', sans-serif;
+  padding: 5px 10px;
+  color: #6e0080;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-shadow: 0 0 10px #6e0080;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* روابط القائمة */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  display: inline-block;
+  transform: scale(1);
+}
+
+.nav-links li a:hover {
+  color: #6e0080;
+  text-shadow: 0 0 10px #6e0080;
+  transform: scale(1.1);
+}
+
+/* واجهة الترحيب */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.content h1 {
+  font-size: 3.5em;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 0 10px #6e0080;
+}
+
+.content h1 .green {
+  color: #6e0080;
+  text-shadow: 0 0 20px #6e0080;
+}
+
+.content p {
+  font-size: 1.2em;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+
+/* زر الشراء */
+.buy-button {
+  background: #6e0080;
+  color: #fff;
+  padding: 15px 35px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  box-shadow: 0 0 20px #6e0080;
+  animation: glow 2s infinite;
+}
+
+.buy-button:hover {
+  background: #550066;
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #a200cc;
+}
+
+.buy-button:active {
+  transform: scale(0.95);
+  background: #3d004d;
+}
+
+/* أنميشن زر متوهج */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 15px #6e0080;
+  }
+  50% {
+    box-shadow: 0 0 25px #6e0080;
+  }
+}
+
+/* قسم السوشيال ميديا */
+.social {
+  text-align: center;
+  margin: 100px 0 50px;
+}
+
+.social h2 {
+  font-size: 2em;
+  color: #6e0080;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #6e0080;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  background: #1a1a1a;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #6e0080;
+}
+
+.social-links a.yt {
+  background-color: #ff0000;
+  box-shadow: 0 0 10px #ff0000;
+}
+
+.social-links a.dc {
+  background-color: #5865f2;
+  box-shadow: 0 0 10px #5865f2;
+}
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
